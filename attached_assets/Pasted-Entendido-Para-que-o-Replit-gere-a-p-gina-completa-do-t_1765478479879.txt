@@ -1,0 +1,154 @@
+Entendido. Para que o Replit gere a página completa (do topo ao rodapé) e não apenas os preços, precisamos de um prompt que defina a "Arquitetura da Página".
+
+Vou estruturar o prompt para criar uma Landing Page de Alta Conversão (Sales Page). Ela seguirá a ordem lógica de persuasão:
+
+Promessa (Hero)
+
+Problema (Para quem é)
+
+Solução (O que tem dentro)
+
+Prova Social (Depoimentos)
+
+Oferta (Preços + Lógica do Pop-up)
+
+Aqui está o Prompt Mestre para você copiar e colar no Replit. Ele resolve o design "grudado" e inclui todos os textos persuasivos.
+
+🚀 O Prompt Mestre para o Replit (Copie e Cole)
+[INÍCIO DO PROMPT]
+
+ATUE COMO: Desenvolvedor Sênior Front-end (Tailwind CSS) e Copywriter de Resposta Direta.
+
+PROJETO: Criar uma Landing Page Completa (Single Page Application) para o produto digital "Meu Primeiro Potinho de Orações". O foco é Mobile First. O design deve ser moderno, com fundo escuro (tema noturno/espiritual) e elementos bem espaçados para não parecer amador.
+
+TECNOLOGIAS:
+
+HTML5
+
+Tailwind CSS (via CDN)
+
+FontAwesome (para ícones)
+
+JavaScript (para lógica do Modal)
+
+REGRAS DE DESIGN (CRÍTICO - NÃO IGNORE):
+
+Espaçamento (Whitespace): Use py-12 ou py-16 entre as seções. Use gap-6 entre elementos. NUNCA deixe texto encostado na borda (use px-6 ou px-8 nos containers).
+
+Alinhamento: Títulos podem ser centralizados. Textos de parágrafo e listas devem ser alinhados à ESQUERDA (text-left) para facilitar a leitura no celular.
+
+Cores: Fundo principal: bg-slate-900 ou gradiente roxo escuro. Cards: Fundo levemente mais claro (bg-white/10 ou bg-slate-800) com bordas arredondadas (rounded-2xl).
+
+ESTRUTURA DA PÁGINA (Siga esta ordem exata):
+
+SEÇÃO 1: HERO (Topo)
+
+Headline Impactante: "Transforme a hora de dormir do seu filho no momento mais doce e cheio de fé do dia."
+
+Sub-headline: "Troque o medo do escuro e o vício em telas por uma rotina de conexão com Deus. Baixe, imprima e monte hoje mesmo."
+
+Elemento Visual: Espaço reservado para Vídeo de Vendas (placeholder cinza com ícone de Play).
+
+Botão CTA (Pulsante): "Quero Transformar as Noites da Minha Casa".
+
+SEÇÃO 2: PARA QUEM É (Problema)
+
+Título: "Para quem é este Potinho?"
+
+Layout: Lista vertical com Ícones. Texto alinhado à ESQUERDA.
+
+Item 1: ❤️ "Mães que sentem aperto no coração por não orarem com os filhos na correria."
+
+Item 2: 📱 "Pais que lutam para tirar o celular da criança à noite."
+
+Item 3: 🌱 "Famílias que querem plantar a sementinha da fé de jeito leve e divertido."
+
+SEÇÃO 3: O QUE TEM DENTRO (Solução Visual)
+
+Título: "O que você recebe no Kit Digital"
+
+Grid de Cards pequenos (2 colunas no mobile):
+
+Card 1: "365 Papeizinhos Coloridos" (Um para cada dia)
+
+Card 2: "Design Lúdico" (Ilustrações fofas)
+
+Card 3: "Manual de Montagem" (Fácil de fazer)
+
+Card 4: "Rótulos Decorativos" (Para colar no vidro)
+
+SEÇÃO 4: DEPOIMENTOS (Prova Social)
+
+Crie 2 cards de depoimentos simulados (Use aspas e estrelas ⭐⭐⭐⭐⭐).
+
+Depoimento 1: Mariana Lopes - "Meu filho chorava para não orar. Ontem ele pediu: 'Mamãe, vamos ver o que o Papai do Céu tem pra mim?'. Chorei de emoção."
+
+Depoimento 2: Camila Ferreira - "Simplesmente genial. Imprimi em 10 minutos e montamos juntos. Ele dormiu na hora!"
+
+SEÇÃO 5: PREÇOS (Oferta Irresistível)
+
+Design: Dois cards distintos.
+
+CARD 1: PLANO BÁSICO (R$ 10,00)
+
+Badge no topo: "93% OFF"
+
+Preço: De R$ 137,00 Por R$ 10,00
+
+Lista (Checklist):
+
+✅ 36 Orações Ilustradas
+
+✅ Formato "Sorteio" Divertido
+
+✅ Entrega Imediata (E-mail)
+
+Botão ID: btn-basico -> Texto: "Quero Começar Por R$ 10".
+
+CARD 2: PLANO PLUS (R$ 20,00)
+
+Badge de destaque: "🏆 O MAIS VENDIDO"
+
+Badge de Economia: "92% OFF"
+
+Preço: De R$ 257,00 Por R$ 20,00
+
+Lista (Checklist Completo):
+
+✅ Tudo do Plano Básico
+
+📚 Álbum “Orações da Noite” (10 orações para acalmar)
+
+🙏 Mini Devocional Infantil (7 Dias com Deus)
+
+🖼️ Mural “Eu e Deus Hoje” (Checklist interativo)
+
+⭐ 10 Desafios Espirituais (Ex: "Agradeça algo hoje")
+
+📖 Livro Digital: Guia para Pais
+
+Botão: "Quero o Kit Completo por R$ 20" (Link direto).
+
+SEÇÃO 6: FAQ (Perguntas Frequentes - Accordion)
+
+"É produto físico?" (Não, é digital/PDF).
+
+"Chega na hora?" (Sim, no e-mail).
+
+FUNCIONALIDADE JAVASCRIPT (POP-UP DE UPSELL): Crie um Script para o comportamento do botão do Plano Básico:
+
+Ao clicar no botão "Quero Começar Por R$ 10", NÃO vá para o link.
+
+Abra um Modal (Pop-up) centralizado na tela (com fundo escurecido).
+
+Conteúdo do Modal:
+
+Título: "⚠️ ESPERE! OFERTA EXCLUSIVA!"
+
+Texto: "Que tal levar o Kit Completo (Plano Plus) com todos os bônus e acesso vitalício por uma diferença minúscula?"
+
+Comparativo: "Leve TUDO por apenas R$ 20,00 (em vez de R$ 257)".
+
+Botão Verde Grande: "SIM! QUERO APROVEITAR TUDO (R$ 20)" -> Link para checkout de 20.
+
+Link Texto Pequeno Cinza: "Não, obrigado. Quero apenas o básico por R$ 10." -> Link para checkout de 10.
