@@ -15,7 +15,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Heart, Smartphone, Sprout, Play, Check, Star, FileText, Palette, BookOpen, Tag, Trophy, AlertTriangle, Sparkles } from "lucide-react";
+import { Heart, Smartphone, Sprout, Play, Check, Star, FileText, Palette, BookOpen, Tag, Trophy, AlertTriangle, Sparkles, Clock, MessageCircle, Calendar } from "lucide-react";
 
 const CHECKOUT_BASIC_URL = "#checkout-basico";
 const CHECKOUT_PLUS_URL = "#checkout-plus";
@@ -37,29 +37,19 @@ function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
         </div>
 
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-foreground" data-testid="text-hero-headline">
-          Transforme a hora de dormir do seu filho no momento mais{" "}
-          <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">doce e cheio de fé</span> do dia.
+          Potinho com Orações para Dormir
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed" data-testid="text-hero-subheadline">
-          Troque o medo do escuro e o vício em telas por uma rotina de conexão com Deus.
-          Baixe, imprima e monte hoje mesmo.
-        </p>
-
-        <div className="relative aspect-video max-w-2xl mx-auto bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl flex items-center justify-center border border-white/10 backdrop-blur-sm shadow-2xl shadow-purple-500/10">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
-          <div
-            className="relative w-20 h-20 rounded-full bg-primary/30 backdrop-blur-sm flex items-center justify-center cursor-pointer transition-all hover:scale-110 hover:bg-primary/40 border border-white/20"
-            data-testid="button-video-play"
-            role="button"
-            aria-label="Reproduzir vídeo de apresentação"
-          >
-            <Play className="w-10 h-10 text-white fill-white ml-1" />
-          </div>
-          <span className="absolute bottom-4 left-4 text-sm text-white/60">
-            Vídeo de apresentação
-          </span>
+        <div className="relative max-w-[280px] md:max-w-xs mx-auto mb-8 cursor-pointer animate-float">
+          <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent blur-3xl rounded-full" />
+          <img
+            src="/potinho-hero.png"
+            alt="Potinho de Orações para Dormir"
+            className="relative w-full drop-shadow-[0_20px_50px_rgba(139,92,246,0.5)] hover:scale-105 transition-transform duration-500"
+          />
         </div>
+
+
 
         <Button
           size="lg"
@@ -71,7 +61,7 @@ function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
           Quero Transformar as Noites da Minha Casa
         </Button>
 
-        <p className="text-sm text-muted-foreground" data-testid="text-hero-social-proof">
+        <p className="text-sm text-muted-foreground whitespace-nowrap" data-testid="text-hero-social-proof">
           Mais de 2.000 famílias já transformaram suas noites
         </p>
       </div>
@@ -130,6 +120,106 @@ function TargetAudienceSection() {
   );
 }
 
+function HowItWorksSection() {
+  return (
+    <section className="py-16 px-6 md:px-8 bg-gradient-to-b from-background to-purple-900/10">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-foreground">
+          Como funciona?
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 relative">
+          {/* Connector Line (Desktop) */}
+          <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-1 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full opacity-50" />
+
+          {/* Step 1 */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-3xl blur-xl transition-opacity opacity-70 group-hover:opacity-100" />
+            <div className="relative p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm text-center transform transition-transform group-hover:-translate-y-1">
+              <div className="w-20 h-20 mx-auto mb-6 bg-indigo-500/20 rounded-full flex items-center justify-center">
+                <Sparkles className="w-10 h-10 text-indigo-400" />
+              </div>
+              <h3 className="text-xl font-bold text-indigo-300 mb-4">1. O Momento da Descoberta</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                "Toda noite, seu filho tira do potinho uma oração diferente."
+              </p>
+            </div>
+          </div>
+
+          {/* Step 2 */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-3xl blur-xl transition-opacity opacity-70 group-hover:opacity-100" />
+            <div className="relative p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm text-center transform transition-transform group-hover:-translate-y-1">
+              <div className="w-20 h-20 mx-auto mb-6 bg-pink-500/20 rounded-full flex items-center justify-center">
+                <Heart className="w-10 h-10 text-pink-400 fill-pink-400/20" />
+              </div>
+              <h3 className="text-xl font-bold text-pink-300 mb-4">2. A Conexão</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                "Você pode ler e a criança repete — criando um momento de fé e afeto juntos."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhyItWorksSection() {
+  const reasons = [
+    {
+      icon: Sparkles,
+      iconColor: "text-amber-400",
+      bgColor: "bg-amber-500/20",
+      text: "O formato de sorteio ativa a curiosidade e o interesse da criança",
+    },
+    {
+      icon: MessageCircle,
+      iconColor: "text-sky-400",
+      bgColor: "bg-sky-500/20",
+      text: "As orações são curtinhas, com linguagem infantil",
+    },
+    {
+      icon: Clock,
+      iconColor: "text-emerald-400",
+      bgColor: "bg-emerald-500/20",
+      text: "Leva menos de 1 minuto por noite",
+    },
+    {
+      icon: Calendar,
+      iconColor: "text-rose-400",
+      bgColor: "bg-rose-500/20",
+      text: "Dá vontade de repetir todos os dias!",
+    },
+  ];
+
+  return (
+    <section className="py-16 px-6 md:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-foreground">
+          Por que funciona?
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {reasons.map((item, index) => (
+            <div
+              key={index}
+              className="group flex items-center gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/20 hover:-translate-y-1"
+            >
+              <div className={`flex-shrink-0 w-14 h-14 rounded-full ${item.bgColor} flex items-center justify-center transition-transform group-hover:scale-110`}>
+                <item.icon className={`w-7 h-7 ${item.iconColor}`} />
+              </div>
+              <p className="text-lg text-foreground font-medium leading-relaxed">
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ProductFeaturesSection() {
   const features = [
     {
@@ -172,7 +262,7 @@ function ProductFeaturesSection() {
           Tudo que você precisa para começar hoje mesmo
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {features.map((feature, index) => (
             <Card
               key={index}
@@ -186,6 +276,73 @@ function ProductFeaturesSection() {
               <p className="text-sm text-muted-foreground" data-testid={`text-feature-subtitle-${index}`}>{feature.subtitle}</p>
             </Card>
           ))}
+        </div>
+
+        <div className="space-y-6">
+          <h3 className="text-xl md:text-2xl font-semibold text-center text-foreground mb-8">
+            Veja alguns exemplos do que vem no kit:
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1 - Manhã (Azul) */}
+            <div className="relative p-6 rounded-3xl bg-sky-50 border-2 border-dashed border-sky-200 shadow-sm hover:scale-105 transition-transform duration-300">
+              <div className="absolute top-4 right-4 text-sky-300">
+                <Star className="w-5 h-5 fill-current" />
+              </div>
+              <div className="absolute bottom-4 left-4 text-sky-300">
+                <Heart className="w-5 h-5 fill-current" />
+              </div>
+              <span className="text-xs font-bold text-sky-300 tracking-wider uppercase mb-2 block">Oração #1</span>
+              <h4 className="text-xl font-bold text-sky-500 mb-3">Oração da Manhã</h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Querido Deus, obrigado por este novo dia. Ajuda-me a ser gentil e a espalhar alegria por onde eu passar. Amém.
+              </p>
+              <div className="flex justify-center gap-1 mt-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-sky-200"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-sky-300"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-sky-200"></div>
+              </div>
+            </div>
+
+            {/* Card 2 - Proteção (Rosa) */}
+            <div className="relative p-6 rounded-3xl bg-pink-50 border-2 border-dashed border-pink-200 shadow-sm hover:scale-105 transition-transform duration-300">
+              <div className="absolute top-4 right-4 text-pink-300">
+                <Star className="w-5 h-5 fill-current" />
+              </div>
+              <div className="absolute bottom-4 left-4 text-pink-300">
+                <Heart className="w-5 h-5 fill-current" />
+              </div>
+              <span className="text-xs font-bold text-pink-300 tracking-wider uppercase mb-2 block">Oração #2</span>
+              <h4 className="text-xl font-bold text-pink-500 mb-3">Oração de Proteção</h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Senhor, protege-me hoje em tudo que eu fizer. Guarda meus passos e me livra de todo mal. Amém.
+              </p>
+              <div className="flex justify-center gap-1 mt-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-pink-200"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-pink-300"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-pink-200"></div>
+              </div>
+            </div>
+
+            {/* Card 3 - Gratidão (Amarelo) */}
+            <div className="relative p-6 rounded-3xl bg-amber-50 border-2 border-dashed border-amber-200 shadow-sm hover:scale-105 transition-transform duration-300">
+              <div className="absolute top-4 right-4 text-amber-300">
+                <Star className="w-5 h-5 fill-current" />
+              </div>
+              <div className="absolute bottom-4 left-4 text-amber-300">
+                <Heart className="w-5 h-5 fill-current" />
+              </div>
+              <span className="text-xs font-bold text-amber-300 tracking-wider uppercase mb-2 block">Oração #3</span>
+              <h4 className="text-xl font-bold text-amber-500 mb-3">Oração da Gratidão</h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Obrigado, Deus, pela minha família, meus amigos e por tudo de bom na minha vida. Eu Te amo! Amém.
+              </p>
+              <div className="flex justify-center gap-1 mt-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-200"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-200"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -500,6 +657,8 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <HeroSection onCtaClick={scrollToPrecos} />
       <TargetAudienceSection />
+      <HowItWorksSection />
+      <WhyItWorksSection />
       <ProductFeaturesSection />
       <TestimonialsSection />
       <PricingSection onBasicClick={handleBasicClick} />
