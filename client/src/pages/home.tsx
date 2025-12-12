@@ -17,8 +17,8 @@ import {
 } from "@/components/ui/accordion";
 import { Heart, Smartphone, Sprout, Play, Check, Star, FileText, Palette, BookOpen, Tag, Trophy, AlertTriangle, Sparkles, Clock, MessageCircle, Calendar } from "lucide-react";
 
-const CHECKOUT_BASIC_URL = "#checkout-basico";
-const CHECKOUT_PLUS_URL = "#checkout-plus";
+const CHECKOUT_BASIC_URL = "https://www.ggcheckout.com/checkout/v2/dKvE17cGThmnu5NhBqzq";
+const CHECKOUT_PLUS_URL = "https://www.ggcheckout.com/checkout/v2/ALv7JUzYfWPOchtetq27";
 
 function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
   return (
