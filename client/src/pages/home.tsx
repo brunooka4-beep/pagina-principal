@@ -226,8 +226,8 @@ function ProductFeaturesSection() {
       icon: FileText,
       iconColor: "text-amber-400",
       bgColor: "bg-amber-500/20",
-      title: "365 Papeizinhos Coloridos",
-      subtitle: "Um para cada dia do ano",
+      title: "36 Papeizinhos Coloridos",
+      subtitle: "Prontinhos para recortar e usar",
     },
     {
       icon: Palette,
