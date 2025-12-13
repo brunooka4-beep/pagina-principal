@@ -15,7 +15,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Heart, Smartphone, Sprout, Play, Check, Star, FileText, Palette, BookOpen, Tag, Trophy, AlertTriangle, Sparkles, Clock, MessageCircle, Calendar } from "lucide-react";
+import { Heart, Smartphone, Sprout, Play, Check, Star, FileText, Palette, BookOpen, Tag, Trophy, AlertTriangle, Sparkles, Clock, MessageCircle, Calendar, ShieldCheck } from "lucide-react";
 
 const CHECKOUT_BASIC_URL = "https://www.ggcheckout.com/checkout/v2/dKvE17cGThmnu5NhBqzq";
 const CHECKOUT_PLUS_URL = "https://www.ggcheckout.com/checkout/v2/ALv7JUzYfWPOchtetq27";
@@ -361,6 +361,21 @@ function TestimonialsSection() {
       text: "Simplesmente genial. Imprimi em 10 minutos e montamos juntos. Ele dormiu na hora!",
       avatar: "C",
     },
+    {
+      name: "Ana Paula Souza",
+      text: "A melhor compra que fiz esse ano. Minha filha de 4 anos agora pede para orar antes de dormir. O material é lindo!",
+      avatar: "A",
+    },
+    {
+      name: "Fernanda Oliveira",
+      text: "Estava com dificuldade de introduzir a fé na rotina dos meus gêmeos. O potinho tornou tudo uma brincadeira séria e gostosa.",
+      avatar: "F",
+    },
+    {
+      name: "Patrícia Santos",
+      text: "O guia para pais me ajudou muito a explicar sobre Deus de forma simples. Recomendo para todas as mamães.",
+      avatar: "P",
+    },
   ];
 
   return (
@@ -516,6 +531,28 @@ function PricingSection({ onBasicClick }: { onBasicClick: () => void }) {
   );
 }
 
+function GuaranteeSection() {
+  return (
+    <section className="py-16 px-6 md:px-8 bg-gradient-to-b from-purple-900/20 to-background">
+      <div className="max-w-3xl mx-auto text-center">
+        <div className="w-20 h-20 mx-auto mb-6 bg-emerald-500/20 rounded-full flex items-center justify-center">
+          <ShieldCheck className="w-10 h-10 text-emerald-400" />
+        </div>
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          Garantia Incondicional de 7 Dias
+        </h2>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+          Se por qualquer motivo você sentir que o Potinho de Orações não é para sua família, basta nos enviar um e-mail e devolveremos 100% do seu dinheiro. Sem perguntas, sem letras miúdas.
+        </p>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
+          <Check className="w-4 h-4" />
+          Risco Zero para você
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FAQSection() {
   const faqs = [
     {
@@ -662,6 +699,7 @@ export default function Home() {
       <ProductFeaturesSection />
       <TestimonialsSection />
       <PricingSection onBasicClick={handleBasicClick} />
+      <GuaranteeSection />
       <FAQSection />
       <Footer />
 
